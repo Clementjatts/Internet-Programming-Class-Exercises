@@ -1,0 +1,34 @@
+/* Part 1 Styles */
+.part1 h2 {
+    color: red;
+}
+
+.part1 p {
+    color: white;
+    background-color: black;
+}
+
+/* Part 2 Styles */
+.part2 h2 {
+    color: green;
+}
+
+.part2 p {
+    color: green;
+    background-color: darkred;
+}
+
+/* Part 3 Styles */
+.part3 p {
+    color: green;
+}
+
+/* Part 4 Styles */
+/* Target the first <p> in part4 specifically */
+.part4 > p:first-child {
+    color: green;
+}
+
+/* Since the requirement is to not use color: black; we don't set it. 
+The default text color should suffice for the nested <p> elements, 
+as long as we don't override their color elsewhere. */

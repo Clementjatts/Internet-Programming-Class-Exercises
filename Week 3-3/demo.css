@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav content content"
+    "footer footer footer";
+  grid-template-columns: 200px 1fr; /* nav takes up 200px, content takes the rest */
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  grid-area: nav;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column; /* Stack nav items vertically */
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin-bottom: 10px; /* Add space between the links */
+}
+
+main {
+  grid-area: content;
+  background-color: darkblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  grid-area: footer;
+  background-color: darkgreen;
+  color: white;
+  text-align: left;
+  padding: 10px 0;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "footer";
+    grid-template-columns: 1fr; /* Stack everything on small screens */
+  }
+
+  nav {
+    padding: 5px;
+    display: block; /* Stack nav items vertically on small screens */
+  }
+}

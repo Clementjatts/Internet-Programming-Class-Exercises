@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "content content aside"
+    "footer footer footer";
+  grid-template-columns: 1fr 3fr 1fr; /* Adjust the ratio between main content and aside as needed */
+  grid-template-rows: auto;
+  height: 100vh; /* Use the full height of the viewport */
+}
+
+header {
+  grid-area: header;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  text-align: center; /* Center the heading text if needed */
+}
+
+nav {
+  grid-area: nav;
+  background-color: yellow;
+  display: flex;
+  justify-content: space-around; /* This will spread your nav items evenly */
+  padding: 10px 0; /* Add some padding on top and bottom */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 0 20px; /* Add padding between the links */
+}
+
+main {
+  grid-area: content;
+  background-color: darkblue;
+  color: white;
+  display: flex; /* Use flexbox to center the content vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  grid-area: aside;
+  background-color: lightgreen;
+  display: flex; /* Use flexbox to center the content vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  grid-area: footer;
+  background-color: darkgreen;
+  color: white;
+  text-align: left;
+  padding: 10px 0;
+}
+
+/* Additional responsive design for smaller screens */
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr; /* Stack everything on small screens */
+  }
+}

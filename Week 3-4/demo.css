@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "content aside aside"
+    "footer footer footer";
+  grid-template-columns: 1fr 1fr; /* two equal columns for content and aside */
+  grid-template-rows: auto 50px 1fr auto; /* adjust the height of nav as needed */
+  height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  grid-area: nav;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+nav li {
+  /* Adjust padding as needed to space out the links */
+  padding: 0 10px;
+}
+
+main {
+  grid-area: content;
+  background-color: darkblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+aside {
+  grid-area: aside;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  grid-area: footer;
+  background-color: darkgreen;
+  color: white;
+  text-align: left;
+  padding: 10px 0;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "aside"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav li {
+    padding: 5px 0; /* Adjust padding for stacked nav items on small screens */
+  }
+}

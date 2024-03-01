@@ -1,0 +1,22 @@
+/* General Body Styling */
+body {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Module Specific Styles */
+.csym019, .csym015 {
+    width: 50%; /* Each takes up half the width */
+    padding: 20px; /* Add some padding for content */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.csym019 {
+    background-color: #f0f0f0; /* Light grey background for CSYM019 */
+}
+
+.csym015 {
+    background-color: #e0e0e0; /* Slightly darker grey for CSYM015 */
+}

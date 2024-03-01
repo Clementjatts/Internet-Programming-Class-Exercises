@@ -1,0 +1,65 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Part 1 Styles */
+.part1 h2 {
+    color: red;
+}
+
+.part1 p {
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Part 2 Styles */
+.part2 h2 {
+    color: green;
+}
+
+.part2 p {
+    color: green;
+    background-color: darkred;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Part 3 Styles */
+.part3 p {
+    color: green;
+}
+
+/* Part 4 Styles */
+.part4 > p:first-child {
+    color: green;
+}
+
+/* Enhancing the appearance without setting black color explicitly */
+.part4 div p {
+    margin-left: 20px;
+}
+
+/* Additional aesthetic improvements */
+.part4 {
+    background-color: #f0f0f0; /* Light grey background for contrast */
+}
